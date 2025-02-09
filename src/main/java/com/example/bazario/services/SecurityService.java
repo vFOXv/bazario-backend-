@@ -25,10 +25,7 @@ public class SecurityService {
         repository.save(user);
     }
 
-    public void findAllUsers() {
-        ArrayList<MyUser> users =(ArrayList<MyUser>) repository.findAll();
-        for (MyUser user : users) {
-            System.out.println(user);
-        }
+    public List<MyUser> findAllUsers() {
+        return repository.findAll();
     }
 }
